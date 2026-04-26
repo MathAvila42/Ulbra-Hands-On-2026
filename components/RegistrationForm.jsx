@@ -1,5 +1,8 @@
 // RegistrationForm.jsx — formulário de inscrição
 
+// Após publicar o Apps Script, substitua a URL abaixo pela URL gerada na implantação
+const APPS_SCRIPT_URL = "COLE_A_URL_DO_WEB_APP_AQUI";
+
 const CURSOS_EAD = [
   'Administração', 'Ciências Contábeis',
   'CST em Análise e Desenvolvimento de Sistemas',
@@ -30,9 +33,9 @@ const POLOS = [
   'São Paulo', 'Brasília', 'Outro',
 ];
 
-function Field({ label, children, full }) {
+function Field({ label, children }) {
   return (
-    <div className="form-field" style={{ gridColumn: full ? '1 / -1' : undefined }}>
+    <div className="form-field">
       <label>{label}</label>
       {children}
     </div>
@@ -42,13 +45,36 @@ function Field({ label, children, full }) {
 function RegistrationForm() {
   const [modalidade, setModalidade] = React.useState('ead');
   const [submitted, setSubmitted] = React.useState(false);
+  const [sending, setSending] = React.useState(false);
+  const [nome, setNome] = React.useState('');
+  const [email, setEmail] = React.useState('');
+  const [whatsapp, setWhatsapp] = React.useState('');
+  const [curso, setCurso] = React.useState('');
+  const [polo, setPolo] = React.useState('');
 
   const cursos = modalidade === 'ead' ? CURSOS_EAD : CURSOS_SEMI;
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    window.scrollTo({ top: e.target.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
+    setSending(true);
+
+    const payload = { nome, email, whatsapp, modalidade, curso, polo };
+
+    fetch(APPS_SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    })
+      .then(() => {
+        setSending(false);
+        setSubmitted(true);
+        window.scrollTo({ top: document.getElementById('inscricao').getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
+      })
+      .catch(() => {
+        setSending(false);
+        setSubmitted(true);
+      });
   };
 
   if (submitted) {
@@ -82,16 +108,19 @@ function RegistrationForm() {
 
       <div className="form-row single">
         <Field label="Nome completo">
-          <input type="text" required placeholder="Seu nome como quer no crachá" />
+          <input type="text" required placeholder="Seu nome como quer no crachá"
+            value={nome} onChange={(e) => setNome(e.target.value)} />
         </Field>
       </div>
 
       <div className="form-row">
         <Field label="E-mail">
-          <input type="email" required placeholder="voce@email.com" />
+          <input type="email" required placeholder="voce@email.com"
+            value={email} onChange={(e) => setEmail(e.target.value)} />
         </Field>
         <Field label="WhatsApp">
-          <input type="tel" required placeholder="(00) 00000-0000" />
+          <input type="tel" required placeholder="(00) 00000-0000"
+            value={whatsapp} onChange={(e) => setWhatsapp(e.target.value)} />
         </Field>
       </div>
 
@@ -99,19 +128,13 @@ function RegistrationForm() {
         <Field label="Modalidade">
           <div className="radio-group">
             <div className="radio-pill">
-              <input
-                type="radio" id="mod-ead" name="modalidade"
-                checked={modalidade === 'ead'}
-                onChange={() => setModalidade('ead')}
-              />
+              <input type="radio" id="mod-ead" name="modalidade"
+                checked={modalidade === 'ead'} onChange={() => { setModalidade('ead'); setCurso(''); }} />
               <label htmlFor="mod-ead">EaD</label>
             </div>
             <div className="radio-pill">
-              <input
-                type="radio" id="mod-semi" name="modalidade"
-                checked={modalidade === 'semi'}
-                onChange={() => setModalidade('semi')}
-              />
+              <input type="radio" id="mod-semi" name="modalidade"
+                checked={modalidade === 'semi'} onChange={() => { setModalidade('semi'); setCurso(''); }} />
               <label htmlFor="mod-semi">Semipresencial</label>
             </div>
           </div>
@@ -120,21 +143,21 @@ function RegistrationForm() {
 
       <div className="form-row">
         <Field label="Curso">
-          <select required defaultValue="">
+          <select required value={curso} onChange={(e) => setCurso(e.target.value)}>
             <option value="" disabled>Selecione...</option>
             {cursos.map((c) => <option key={c} value={c}>{c}</option>)}
           </select>
         </Field>
         <Field label="Polo">
-          <select required defaultValue="">
+          <select required value={polo} onChange={(e) => setPolo(e.target.value)}>
             <option value="" disabled>Selecione...</option>
             {POLOS.map((p) => <option key={p} value={p}>{p}</option>)}
           </select>
         </Field>
       </div>
 
-      <button type="submit" className="form-submit">
-        Garantir minha vaga →
+      <button type="submit" className="form-submit" disabled={sending}>
+        {sending ? 'Enviando...' : 'Garantir minha vaga →'}
       </button>
 
       <p className="form-footnote">
