@@ -1,7 +1,7 @@
 // RegistrationForm.jsx — formulário de inscrição
 
 // Após publicar o Apps Script, substitua a URL abaixo pela URL gerada na implantação
-const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzEra0df8C2H8MAzTmD5gKVQEhcwOrPWJr1cEDs1UR3dzKGU7avU6kBS1GlR5HiNGT4/exec";
+const APPS_SCRIPT_URL = "https://sheetdb.io/api/v1/xf1oz7m7gi0de";
 
 const CURSOS_EAD = [
   'Administração', 'Ciências Contábeis',
@@ -62,9 +62,8 @@ function RegistrationForm() {
 
     fetch(APPS_SCRIPT_URL, {
       method: 'POST',
-      mode: 'no-cors',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
+      body: JSON.stringify({ data: [payload] }),
     })
       .then(() => {
         setSending(false);
