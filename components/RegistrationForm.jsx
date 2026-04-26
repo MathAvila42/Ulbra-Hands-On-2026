@@ -42,8 +42,6 @@ function Field({ label, children, full }) {
 function RegistrationForm() {
   const [modalidade, setModalidade] = React.useState('ead');
   const [submitted, setSubmitted] = React.useState(false);
-  const [transporte, setTransporte] = React.useState(false);
-  const [estacionamento, setEstacionamento] = React.useState(false);
 
   const cursos = modalidade === 'ead' ? CURSOS_EAD : CURSOS_SEMI;
 
@@ -140,28 +138,6 @@ function RegistrationForm() {
           <input type="text" placeholder="Ex: vegetariano, sem glúten, sem lactose..." />
         </Field>
       </div>
-
-      <label className="checkbox-row">
-        <input
-          type="checkbox"
-          checked={transporte}
-          onChange={(e) => setTransporte(e.target.checked)}
-        />
-        <span>
-          <strong>Preciso de transporte</strong> — ônibus fretado saindo do meu polo (sujeito a disponibilidade)
-        </span>
-      </label>
-
-      <label className="checkbox-row">
-        <input
-          type="checkbox"
-          checked={estacionamento}
-          onChange={(e) => setEstacionamento(e.target.checked)}
-        />
-        <span>
-          <strong>Vou precisar de estacionamento</strong> no campus
-        </span>
-      </label>
 
       <button type="submit" className="form-submit">
         Garantir minha vaga →
