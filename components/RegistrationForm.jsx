@@ -133,12 +133,6 @@ function RegistrationForm() {
         </Field>
       </div>
 
-      <div className="form-row single">
-        <Field label="Restrição alimentar (opcional)">
-          <input type="text" placeholder="Ex: vegetariano, sem glúten, sem lactose..." />
-        </Field>
-      </div>
-
       <button type="submit" className="form-submit">
         Garantir minha vaga →
       </button>

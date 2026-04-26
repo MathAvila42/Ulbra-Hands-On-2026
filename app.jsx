@@ -149,11 +149,7 @@ Exclusivo para alunos EaD e Semipresencial.
             <div className="info-block-value">EaD + Semi</div>
             <div className="info-block-note">Alunos, professores, tutores e Coordenadores</div>
           </div>
-          <div className="info-block">
-            <div className="info-block-label">Inclui</div>
-            <div className="info-block-value">Almoço + Coffee</div>
-            <div className="info-block-note">Credencial e certificado de horas complementares</div>
-          </div>
+
         </div>
       </div>
 
@@ -187,10 +183,10 @@ Exclusivo para alunos EaD e Semipresencial.
             </p>
           </div>
           <div className="contact-channels">
-            <a className="contact-channel" href="mailto:handson@ulbra.br">
+            <a className="contact-channel" href="mailto:antonio.machado@ulbra.br">
               <div>
                 <div className="contact-channel-label">E-mail</div>
-                <div className="contact-channel-value">simone.echeveste@ulbra.br</div>
+                <div className="contact-channel-value">antonio.machado@ulbra.br</div>
               </div>
               <span className="contact-channel-arrow">→</span>
             </a>
