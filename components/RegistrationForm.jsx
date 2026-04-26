@@ -58,7 +58,15 @@ function RegistrationForm() {
     e.preventDefault();
     setSending(true);
 
-    const payload = { nome, email, whatsapp, modalidade, curso, polo };
+    const payload = {
+      "Data/Hora": new Date().toLocaleString("pt-BR"),
+      "Nome": nome,
+      "E-mail": email,
+      "WhatsApp": whatsapp,
+      "Modalidade": modalidade === 'ead' ? 'EaD' : 'Semipresencial',
+      "Curso": curso,
+      "Polo": polo,
+    };
 
     fetch(APPS_SCRIPT_URL, {
       method: 'POST',
