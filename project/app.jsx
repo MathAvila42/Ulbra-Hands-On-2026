@@ -28,7 +28,7 @@ function TweaksUI() {
 
   return (
     <TweaksPanel>
-      <TweakSection title="Conteúdo">
+      <TweakSection label="Conteúdo">
         <TweakToggle
           label="Contagem regressiva"
           value={values.showCountdown}

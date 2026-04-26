@@ -148,7 +148,7 @@ function RegistrationForm() {
           onChange={(e) => setTransporte(e.target.checked)}
         />
         <span>
-          <strong style={{color:'var(--white)'}}>Preciso de transporte</strong> — ônibus fretado saindo do meu polo (sujeito a disponibilidade)
+          <strong>Preciso de transporte</strong> — ônibus fretado saindo do meu polo (sujeito a disponibilidade)
         </span>
       </label>
 
@@ -159,7 +159,7 @@ function RegistrationForm() {
           onChange={(e) => setEstacionamento(e.target.checked)}
         />
         <span>
-          <strong style={{color:'var(--white)'}}>Vou precisar de estacionamento</strong> no campus
+          <strong>Vou precisar de estacionamento</strong> no campus
         </span>
       </label>
 
