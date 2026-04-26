@@ -1,7 +1,7 @@
 // RegistrationForm.jsx — formulário de inscrição
 
 // Após publicar o Apps Script, substitua a URL abaixo pela URL gerada na implantação
-const APPS_SCRIPT_URL = "COLE_A_URL_DO_WEB_APP_AQUI";
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzEra0df8C2H8MAzTmD5gKVQEhcwOrPWJr1cEDs1UR3dzKGU7avU6kBS1GlR5HiNGT4/exec";
 
 const CURSOS_EAD = [
   'Administração', 'Ciências Contábeis',
