@@ -11,7 +11,7 @@ const FAQ_ITEMS = [
   },
   {
     q: 'Vai ter transporte saindo dos polos?',
-    a: 'Estamos organizando ônibus fretados para alguns polos, conforme demanda. Entre em contato pelos canais abaixo para verificar disponibilidade do seu polo.',
+    a: 'Estamos organizando ônibus fretados para alguns polos mais distantes do Campus Canoas. Entre em contato com o seu polo para verificar a disponibilidade.',
   },
   {
     q: 'O evento vale horas complementares?',

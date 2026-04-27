@@ -208,9 +208,9 @@ function RegistrationForm() {
             <Field label="Cursos que atua (selecione todos)">
               <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:'6px', marginTop:'2px'}}>
                 {TODOS_CURSOS.map((c) => (
-                  <label key={c} className="checkbox-row" style={{marginBottom:0}}>
+                  <label key={c} className="checkbox-row" style={{marginBottom:0, gap:'16px'}}>
                     <input type="checkbox" checked={cursosSelecionados.includes(c)}
-                      onChange={() => toggleCurso(c)} style={{accentColor:'var(--orange)'}} />
+                      onChange={() => toggleCurso(c)} style={{accentColor:'var(--orange)', flexShrink:0}} />
                     <span style={{fontSize:'12px'}}>{c}</span>
                   </label>
                 ))}

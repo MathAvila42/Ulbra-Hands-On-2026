@@ -149,6 +149,11 @@ Exclusivo para alunos EaD e Semipresencial.
             <div className="info-block-value">EaD + Semi</div>
             <div className="info-block-note">Alunos, professores, tutores e Coordenadores</div>
           </div>
+          <div className="info-block">
+            <div className="info-block-label">Entrada</div>
+            <div className="info-block-value">1kg de alimento</div>
+            <div className="info-block-note">Não perecível. Contamos com a sua parte.</div>
+          </div>
 
         </div>
       </div>
