@@ -448,9 +448,8 @@ img { display: block; max-width: 100%; }
   position: relative;
   overflow: hidden;
   background-image: url('assets/fingerprint-pattern.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-size: 560px;
+  background-repeat: repeat;
   color: var(--white);
   padding: 88px 32px;
   border-top: 1px solid var(--line);
