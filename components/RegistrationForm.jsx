@@ -59,7 +59,7 @@ function RegistrationForm() {
     setSending(true);
 
     const payload = {
-      "Data/Hora": new Date().toLocaleString("pt-BR"),
+      "Timestamp": new Date().toLocaleString("pt-BR"),
       "Nome": nome,
       "E-mail": email,
       "WhatsApp": whatsapp,
