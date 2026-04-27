@@ -3,19 +3,15 @@
 const FAQ_ITEMS = [
   {
     q: 'Quanto custa a inscrição?',
-    a: 'Zero. O Hands On 2026 é gratuito para todos os alunos dos cursos EaD e Semipresencial da Ulbra. Inclui credencial, coffee breaks e almoço no campus.',
+    a: 'A participação é mediante entrada solidária (doação de 1kg de alimento não perecível).',
   },
   {
     q: 'Preciso comparecer o dia inteiro?',
-    a: 'A programação acontece das 9h30 às 15h30, com atividades de manhã (palestras), almoço no campus e workshops hands-on à tarde. Recomendamos fortemente a participação integral — é onde acontecem as melhores conexões.',
+    a: 'O evento vai das 9h30 às 16h, com atividades pela manhã e à tarde. Recomendamos fortemente a participação integral — é onde acontecem as melhores conexões.',
   },
   {
     q: 'Vai ter transporte saindo dos polos?',
-    a: 'Estamos organizando ônibus fretados para alguns polos, conforme demanda. Marque a opção "Preciso de transporte" no formulário e entraremos em contato com os detalhes por e-mail.',
-  },
-  {
-    q: 'E se eu não puder ir no dia?',
-    a: 'Avise a gente com antecedência pelos canais de contato para liberarmos sua vaga para outro colega. As vagas são limitadas pela capacidade do campus.',
+    a: 'Estamos organizando ônibus fretados para alguns polos, conforme demanda. Entre em contato pelos canais abaixo para verificar disponibilidade do seu polo.',
   },
   {
     q: 'O evento vale horas complementares?',
@@ -23,15 +19,11 @@ const FAQ_ITEMS = [
   },
   {
     q: 'Posso levar um acompanhante?',
-    a: 'O evento é exclusivo para alunos, professores e convidados institucionais. Cada aluno inscrito tem direito apenas à sua credencial.',
+    a: 'O evento é exclusivo para alunos, professores e convidados institucionais. Cada inscrito tem direito apenas à sua credencial.',
   },
   {
-    q: 'Onde exatamente é o Campus Canoas?',
-    a: 'Av. Farroupilha, 8001 — São José, Canoas/RS. Às vésperas do evento, você receberá por e-mail um mapa detalhado com pontos de credenciamento e salas dos workshops.',
-  },
-  {
-    q: 'E se o curso que eu faço não estiver na lista?',
-    a: 'Esta edição é voltada apenas aos cursos listados. Se houver dúvidas, entre em contato — a cada edição novos cursos podem ser incluídos.',
+    q: 'Onde fica o Campus Canoas?',
+    a: 'Av. Farroupilha, 8001 — São José, Canoas/RS.',
   },
 ];
 

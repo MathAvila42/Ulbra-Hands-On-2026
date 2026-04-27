@@ -115,7 +115,7 @@ Exclusivo para alunos EaD e Semipresencial.
               </div>
               <div className="hero-fact">
                 <span className="hero-fact-dot" />
-                Entrada gratuita
+                Entrada solidária (1kg de alimento)
               </div>
             </div>
 
@@ -137,7 +137,7 @@ Exclusivo para alunos EaD e Semipresencial.
           <div className="info-block">
             <div className="info-block-label">Data</div>
             <div className="info-block-value">30 / 05 / 26</div>
-            <div className="info-block-note">Sábado, das 9h30 às 15h30</div>
+            <div className="info-block-note">Sábado, das 9h30 às 16h</div>
           </div>
           <div className="info-block">
             <div className="info-block-label">Local</div>
@@ -193,14 +193,7 @@ Exclusivo para alunos EaD e Semipresencial.
             <a className="contact-channel" href="#">
               <div>
                 <div className="contact-channel-label">WhatsApp</div>
-                <div className="contact-channel-value">(51) 3477-0000</div>
-              </div>
-              <span className="contact-channel-arrow">→</span>
-            </a>
-            <a className="contact-channel" href="#">
-              <div>
-                <div className="contact-channel-label">Instagram</div>
-                <div className="contact-channel-value">@ulbraoficial</div>
+                <div className="contact-channel-value">(51) 99326-2382</div>
               </div>
               <span className="contact-channel-arrow">→</span>
             </a>
