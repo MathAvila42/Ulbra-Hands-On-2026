@@ -14,7 +14,8 @@ const CURSOS_EAD = [
   'CST em Marketing e Mídias Digitais', 'CST em Mídias Sociais Digitais',
   'CST em Pilotagem Profissional de Aeronaves',
   'CST em Processos Gerenciais', 'CST em Segurança da Informação',
-  'CST em Serviços Jurídicos e Notariais', 'Jornalismo', 'Teologia',
+  'CST em Serviços Jurídicos e Notariais', 'Geografia', 'História',
+  'Jornalismo', 'Letras', 'Matemática', 'Teologia',
 ];
 
 const CURSOS_SEMI = [

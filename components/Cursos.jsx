@@ -11,7 +11,8 @@ const EAD_LIST = [
 'CST Marketing e Mídias Digitais', 'CST Mídias Sociais Digitais',
 'CST Pilotagem Profissional de Aeronaves',
 'CST Processos Gerenciais', 'CST Segurança da Informação',
-'CST Serviços Jurídicos e Notariais', 'Jornalismo', 'Teologia'];
+'CST Serviços Jurídicos e Notariais', 'Geografia', 'História',
+'Jornalismo', 'Letras', 'Matemática', 'Teologia'];
 
 
 const SEMI_LIST = [
