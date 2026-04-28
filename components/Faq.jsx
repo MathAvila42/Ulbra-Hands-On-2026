@@ -7,7 +7,7 @@ const FAQ_ITEMS = [
   },
   {
     q: 'Preciso comparecer o dia inteiro?',
-    a: 'O evento vai das 9h30 às 16h, com atividades pela manhã e à tarde. Recomendamos fortemente a participação integral — é onde acontecem as melhores conexões.',
+    a: 'O evento vai das 9h às 16h, com atividades pela manhã e à tarde. Recomendamos fortemente a participação integral — é onde acontecem as melhores conexões.',
   },
   {
     q: 'Vai ter transporte saindo dos polos?',

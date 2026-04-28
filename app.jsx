@@ -137,7 +137,7 @@ Exclusivo para alunos EaD e Semipresencial.
           <div className="info-block">
             <div className="info-block-label">Data</div>
             <div className="info-block-value">30 / 05 / 26</div>
-            <div className="info-block-note">Sábado, das 9h30 às 16h</div>
+            <div className="info-block-note">Sábado, das 9h às 16h</div>
           </div>
           <div className="info-block">
             <div className="info-block-label">Local</div>
