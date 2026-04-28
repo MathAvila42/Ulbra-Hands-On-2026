@@ -129,12 +129,12 @@ function RegistrationForm() {
 
       <div className="form-row single">
         <Field label="Tipo de participante">
-          <div className="radio-group" style={{flexWrap:'wrap'}}>
+          <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:'8px'}}>
             {TIPOS.map((t) => (
-              <div className="radio-pill" key={t}>
+              <div className="radio-pill" key={t} style={{minWidth:0}}>
                 <input type="radio" id={`tipo-${t}`} name="tipo"
                   checked={tipo === t} onChange={() => { setTipo(t); setCursosSelecionados([]); }} />
-                <label htmlFor={`tipo-${t}`}>{t}</label>
+                <label htmlFor={`tipo-${t}`} style={{whiteSpace:'normal', lineHeight:'1.3', padding:'10px 6px', fontSize:'12px'}}>{t}</label>
               </div>
             ))}
           </div>

@@ -195,7 +195,7 @@ Exclusivo para alunos EaD e Semipresencial.
               </div>
               <span className="contact-channel-arrow">→</span>
             </a>
-            <a className="contact-channel" href="#">
+            <a className="contact-channel" href="https://wa.me/5551993262382" target="_blank" rel="noopener noreferrer">
               <div>
                 <div className="contact-channel-label">WhatsApp</div>
                 <div className="contact-channel-value">(51) 99326-2382</div>
