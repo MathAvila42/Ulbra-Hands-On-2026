@@ -12,12 +12,12 @@ const EAD_LIST = [
 'CST Pilotagem Profissional de Aeronaves',
 'CST Processos Gerenciais', 'CST Segurança da Informação',
 'CST Serviços Jurídicos e Notariais', 'Geografia', 'História',
-'Jornalismo', 'Letras', 'Matemática', 'Teologia'];
+'Jornalismo', 'Letras', 'Matemática', 'Serviço Social', 'Teologia'];
 
 
 const SEMI_LIST = [
-'Agronomia', 'Biomedicina', 'Ciência da Computação',
-'CST Estética e Cosmética', 'Educação Física Bacharelado',
+'Agronomia', 'Arquitetura e Urbanismo', 'Biomedicina', 'Ciência da Computação',
+'CST Estética e Cosmética', 'Design de Interiores', 'Educação Física Bacharelado',
 'Educação Física Licenciatura', 'Engenharia de Produção',
 'Engenharia de Software', 'Engenharia Mecânica',
 'Engenharia Mecânica Automotiva', 'Farmácia', 'Fisioterapia',

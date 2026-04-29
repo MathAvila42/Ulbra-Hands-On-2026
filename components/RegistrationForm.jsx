@@ -15,12 +15,12 @@ const CURSOS_EAD = [
   'CST em Pilotagem Profissional de Aeronaves',
   'CST em Processos Gerenciais', 'CST em Segurança da Informação',
   'CST em Serviços Jurídicos e Notariais', 'Geografia', 'História',
-  'Jornalismo', 'Letras', 'Matemática', 'Teologia',
+  'Jornalismo', 'Letras', 'Matemática', 'Serviço Social', 'Teologia',
 ];
 
 const CURSOS_SEMI = [
-  'Agronomia', 'Biomedicina', 'Ciência da Computação',
-  'CST em Estética e Cosmética', 'Educação Física Bacharelado',
+  'Agronomia', 'Arquitetura e Urbanismo', 'Biomedicina', 'Ciência da Computação',
+  'CST em Estética e Cosmética', 'Design de Interiores', 'Educação Física Bacharelado',
   'Educação Física Licenciatura', 'Engenharia de Produção',
   'Engenharia de Software', 'Engenharia Mecânica',
   'Engenharia Mecânica Automotiva', 'Farmácia', 'Fisioterapia',
