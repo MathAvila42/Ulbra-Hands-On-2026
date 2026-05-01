@@ -3,19 +3,19 @@
 const APPS_SCRIPT_URL = "https://sheetdb.io/api/v1/xf1oz7m7gi0de";
 
 const CURSOS_EAD = [
-  'Administração', 'Ciências Contábeis',
+  'Administração', 'Biologia', 'Ciências Contábeis',
   'CST em Análise e Desenvolvimento de Sistemas',
   'CST em Comércio Exterior', 'CST em Design Digital',
   'CST em Gestão Comercial', 'CST em Gestão da Produção Industrial',
   'CST em Gestão da Tecnologia da Informação',
   'CST em Gestão de Recursos Humanos', 'CST em Gestão do Agronegócio',
-  'CST em Gestão Financeira', 'CST em Gestão Pública',
+  'CST em Gestão Financeira', 'CST em Gestão Hospitalar', 'CST em Gestão Pública',
   'CST em Inteligência Artificial', 'CST em Logística',
   'CST em Marketing e Mídias Digitais', 'CST em Mídias Sociais Digitais',
   'CST em Pilotagem Profissional de Aeronaves',
   'CST em Processos Gerenciais', 'CST em Segurança da Informação',
   'CST em Serviços Jurídicos e Notariais', 'Geografia', 'História',
-  'Jornalismo', 'Letras', 'Matemática', 'Serviço Social', 'Teologia',
+  'Jornalismo', 'Letras', 'Matemática', 'Pedagogia', 'Serviço Social', 'Teologia',
 ];
 
 const CURSOS_SEMI = [

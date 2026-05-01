@@ -1,18 +1,18 @@
 // Cursos.jsx — lista completa EaD + Semipresencial em tabs
 
 const EAD_LIST = [
-'Administração', 'Ciências Contábeis',
+'Administração', 'Biologia', 'Ciências Contábeis',
 'CST Análise e Desenvolvimento de Sistemas', 'CST Comércio Exterior',
 'CST Design Digital', 'CST Gestão Comercial',
 'CST Gestão da Produção Industrial', 'CST Gestão da TI',
 'CST Gestão de Recursos Humanos', 'CST Gestão do Agronegócio',
-'CST Gestão Financeira', 'CST Gestão Pública',
+'CST Gestão Financeira', 'CST Gestão Hospitalar', 'CST Gestão Pública',
 'CST Inteligência Artificial', 'CST Logística',
 'CST Marketing e Mídias Digitais', 'CST Mídias Sociais Digitais',
 'CST Pilotagem Profissional de Aeronaves',
 'CST Processos Gerenciais', 'CST Segurança da Informação',
 'CST Serviços Jurídicos e Notariais', 'Geografia', 'História',
-'Jornalismo', 'Letras', 'Matemática', 'Serviço Social', 'Teologia'];
+'Jornalismo', 'Letras', 'Matemática', 'Pedagogia', 'Serviço Social', 'Teologia'];
 
 
 const SEMI_LIST = [
