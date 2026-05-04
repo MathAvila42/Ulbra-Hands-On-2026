@@ -38,7 +38,7 @@ const POLOS = [
   'Torres', 'Tramandaí', 'Tupanciretã', 'Viamão',
 ];
 
-const TIPOS = ['Aluno', 'Professor', 'Tutor/Mediador', 'Coordenador'];
+const TIPOS = ['Aluno', 'Professor', 'Tutor/Mediador', 'Coordenador', 'Convidado'];
 
 function Field({ label, children }) {
   return (
@@ -75,10 +75,12 @@ function RegistrationForm() {
     e.preventDefault();
     if (!tipo) return;
     if (isProfissional && cursosSelecionados.length === 0) return;
+    const isConvidado = tipo === 'Convidado';
     setSending(true);
 
     const cursoFinal = isAluno
       ? cursosSelecionados[0] || ''
+      : isConvidado ? ''
       : cursosSelecionados.join(', ');
 
     const payload = {
