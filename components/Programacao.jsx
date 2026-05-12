@@ -249,7 +249,7 @@ const TODOS_CURSOS_PROG = Object.keys(CURSO_TO_TRACK).sort((a, b) => a.localeCom
 
 function Programacao() {
   const [cursoAtivo, setCursoAtivo] = React.useState('');
-  const [numCols, setNumCols] = React.useState(3);
+  const [numCols, setNumCols] = React.useState(() => window.innerWidth <= 640 ? 1 : 3);
   const gridRef = React.useRef(null);
   const panelRef = React.useRef(null);
 
