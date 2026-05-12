@@ -814,7 +814,6 @@ footer .tag { color: var(--orange); }
 .prog-curso-item.active .prog-curso-chevron { opacity: .8; }
 
 .prog-panel {
-  margin-top: 2px;
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: 8px;

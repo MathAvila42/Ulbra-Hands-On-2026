@@ -264,6 +264,48 @@ function Programacao() {
     }
   };
 
+  const panel = track && (
+    <div key="prog-panel" className="prog-panel" ref={panelRef} style={{ gridColumn: '1 / -1' }}>
+      <div className="prog-panel-head">
+        <div>
+          <div className="prog-panel-eyebrow">{track.label}</div>
+          <div className="prog-panel-curso">{cursoAtivo}</div>
+        </div>
+        <button className="prog-panel-close" onClick={() => setCursoAtivo('')}>✕</button>
+      </div>
+      <div className="prog-timeline">
+        {track.programa.map((item, i) => (
+          <div key={i} className={`prog-item${item.lunch ? ' prog-item--lunch' : ''}`}>
+            <div className="prog-time">{item.h}</div>
+            <div className="prog-dot-col">
+              <div className="prog-dot" />
+              {i < track.programa.length - 1 && <div className="prog-line" />}
+            </div>
+            <div className="prog-content">
+              <div className="prog-atividade">{item.a}</div>
+              {item.sub && <div className="prog-sub">{item.sub}</div>}
+              {item.l && <div className="prog-local">{item.l}</div>}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+
+  const gridItems = TODOS_CURSOS_PROG.flatMap((c) => {
+    const btn = (
+      <button
+        key={c}
+        className={`prog-curso-item${cursoAtivo === c ? ' active' : ''}`}
+        onClick={() => handleCurso(c)}>
+        <span className="curso-item-bullet" />
+        <span className="prog-curso-nome">{c}</span>
+        <span className="prog-curso-chevron">{cursoAtivo === c ? '▲' : '▼'}</span>
+      </button>
+    );
+    return cursoAtivo === c ? [btn, panel] : [btn];
+  });
+
   return (
     <section className="section" id="programacao">
       <div className="section-head">
@@ -277,45 +319,8 @@ function Programacao() {
       </p>
 
       <div className="cursos-grid">
-        {TODOS_CURSOS_PROG.map((c) => (
-          <button
-            key={c}
-            className={`prog-curso-item${cursoAtivo === c ? ' active' : ''}`}
-            onClick={() => handleCurso(c)}>
-            <span className="curso-item-bullet" />
-            <span className="prog-curso-nome">{c}</span>
-            <span className="prog-curso-chevron">{cursoAtivo === c ? '▲' : '▼'}</span>
-          </button>
-        ))}
+        {gridItems}
       </div>
-
-      {track && (
-        <div className="prog-panel" ref={panelRef}>
-          <div className="prog-panel-head">
-            <div>
-              <div className="prog-panel-eyebrow">{track.label}</div>
-              <div className="prog-panel-curso">{cursoAtivo}</div>
-            </div>
-            <button className="prog-panel-close" onClick={() => setCursoAtivo('')}>✕</button>
-          </div>
-          <div className="prog-timeline">
-            {track.programa.map((item, i) => (
-              <div key={i} className={`prog-item${item.lunch ? ' prog-item--lunch' : ''}`}>
-                <div className="prog-time">{item.h}</div>
-                <div className="prog-dot-col">
-                  <div className="prog-dot" />
-                  {i < track.programa.length - 1 && <div className="prog-line" />}
-                </div>
-                <div className="prog-content">
-                  <div className="prog-atividade">{item.a}</div>
-                  {item.sub && <div className="prog-sub">{item.sub}</div>}
-                  {item.l && <div className="prog-local">{item.l}</div>}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
     </section>
   );
 }
