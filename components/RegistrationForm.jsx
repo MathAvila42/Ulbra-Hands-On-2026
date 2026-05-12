@@ -80,7 +80,7 @@ function RegistrationForm() {
 
     const cursoFinal = isAluno
       ? cursosSelecionados[0] || ''
-      : isConvidado ? ''
+      : isConvidado ? (cursosSelecionados[0] || '')
       : cursosSelecionados.join(', ');
 
     const payload = {
@@ -221,6 +221,17 @@ function RegistrationForm() {
             </Field>
           </div>
         </>
+      )}
+
+      {tipo === 'Convidado' && (
+        <div className="form-row single">
+          <Field label="É convidado de algum curso específico? (opcional)">
+            <select value={cursosSelecionados[0] || ''} onChange={(e) => setCursosSelecionados(e.target.value ? [e.target.value] : [])}>
+              <option value="">Nenhum em especial</option>
+              {TODOS_CURSOS.map((c) => <option key={c} value={c}>{c}</option>)}
+            </select>
+          </Field>
+        </div>
       )}
 
       <button type="submit" className="form-submit" disabled={sending || !tipo}>
