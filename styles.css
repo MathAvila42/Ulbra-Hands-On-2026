@@ -772,6 +772,96 @@ footer strong {
 }
 footer .tag { color: var(--orange); }
 
+/* ---------- Programação ---------- */
+.prog-section { background: var(--cream); }
+.prog-intro { color: var(--muted); font-size: 15px; margin-bottom: 28px; }
+.prog-select-wrap { margin-bottom: 36px; }
+.prog-select {
+  width: 100%;
+  max-width: 480px;
+  padding: 14px 16px;
+  border: 2px solid var(--line);
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--ink);
+  background: var(--white);
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236e6e82' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  cursor: pointer;
+  transition: border-color .15s;
+}
+.prog-select:focus { outline: none; border-color: var(--orange); }
+.prog-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 680px;
+}
+.prog-track-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 24px;
+}
+.prog-timeline { display: flex; flex-direction: column; }
+.prog-item {
+  display: grid;
+  grid-template-columns: 52px 20px 1fr;
+  gap: 0 12px;
+  min-height: 56px;
+}
+.prog-item--lunch .prog-time,
+.prog-item--lunch .prog-atividade { color: var(--muted); font-style: italic; }
+.prog-item--lunch .prog-dot { background: var(--line); }
+.prog-time {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--navy);
+  padding-top: 2px;
+  text-align: right;
+  white-space: nowrap;
+}
+.prog-dot-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.prog-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--orange);
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+.prog-line {
+  width: 2px;
+  flex: 1;
+  background: var(--line);
+  margin: 4px 0;
+  min-height: 16px;
+}
+.prog-content { padding-bottom: 20px; }
+.prog-atividade { font-size: 14px; font-weight: 600; color: var(--ink); line-height: 1.4; }
+.prog-sub { font-size: 12px; color: var(--muted); margin-top: 3px; }
+.prog-local {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--muted);
+  background: var(--cream-deep);
+  border-radius: 4px;
+  padding: 2px 8px;
+  margin-top: 6px;
+}
+
 /* ---------- Responsivo ---------- */
 @media (max-width: 960px) {
   .hero-grid { grid-template-columns: 1fr; gap: 40px; }
