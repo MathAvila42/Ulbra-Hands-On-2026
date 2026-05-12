@@ -33,6 +33,16 @@ html, body {
 img { display: block; max-width: 100%; }
 
 /* ---------- Top bar ---------- */
+.top-nav-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+  opacity: .7;
+  transition: opacity .15s;
+}
+.top-nav-link:hover { opacity: 1; }
+
 .top-bar {
   position: sticky;
   top: 0;

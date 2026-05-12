@@ -77,7 +77,10 @@ function App() {
             <span className="ulbra-dot" />
             <span>Ulbra Hands On 2026</span>
           </div>
-          <button className="top-cta" onClick={scrollToForm}>Inscrever-se</button>
+          <div style={{display:'flex', alignItems:'center', gap:'16px'}}>
+            <a href="/programacao" className="top-nav-link">Programação</a>
+            <button className="top-cta" onClick={scrollToForm}>Inscrever-se</button>
+          </div>
         </div>
       </header>
 
@@ -172,7 +175,7 @@ Exclusivo para alunos EaD e Semipresencial.
         </div>
       </section>
 
-      <Programacao />
+      <Cursos />
       <Faq />
 
       {/* Contato */}
