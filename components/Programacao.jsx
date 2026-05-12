@@ -1,4 +1,4 @@
-// Programacao.jsx — programação por curso
+// Programacao.jsx
 
 const TRACKS = {
   negocios: {
@@ -248,35 +248,56 @@ const CURSO_TO_TRACK = {
 const TODOS_CURSOS_PROG = Object.keys(CURSO_TO_TRACK).sort((a, b) => a.localeCompare(b, 'pt'));
 
 function Programacao() {
-  const [curso, setCurso] = React.useState('');
-  const trackId = curso ? CURSO_TO_TRACK[curso] : null;
+  const [cursoAtivo, setCursoAtivo] = React.useState('');
+  const panelRef = React.useRef(null);
+
+  const trackId = cursoAtivo ? CURSO_TO_TRACK[cursoAtivo] : null;
   const track = trackId ? TRACKS[trackId] : null;
 
+  const handleCurso = (curso) => {
+    const abrindo = cursoAtivo !== curso;
+    setCursoAtivo(abrindo ? curso : '');
+    if (abrindo) {
+      setTimeout(() => {
+        panelRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 50);
+    }
+  };
+
   return (
-    <section className="section prog-section" id="programacao">
+    <section className="section" id="programacao">
       <div className="section-head">
         <div>
-          <div className="section-eyebrow">30 de maio · Campus Canoas</div>
-          <h2 className="section-title">Programação<br />do dia</h2>
+          <div className="section-eyebrow">30 de maio · 2026</div>
+          <h2 className="section-title">Programação<br />do evento</h2>
         </div>
       </div>
-      <p className="prog-intro">Selecione o seu curso para ver o que acontece no seu dia.</p>
+      <p className="cursos-intro">
+        Clique no seu curso para ver a programação completa do dia.
+      </p>
 
-      <div className="prog-select-wrap">
-        <select
-          className="prog-select"
-          value={curso}
-          onChange={(e) => setCurso(e.target.value)}>
-          <option value="">Selecione seu curso...</option>
-          {TODOS_CURSOS_PROG.map((c) => (
-            <option key={c} value={c}>{c}</option>
-          ))}
-        </select>
+      <div className="cursos-grid">
+        {TODOS_CURSOS_PROG.map((c) => (
+          <button
+            key={c}
+            className={`prog-curso-item${cursoAtivo === c ? ' active' : ''}`}
+            onClick={() => handleCurso(c)}>
+            <span className="curso-item-bullet" />
+            <span className="prog-curso-nome">{c}</span>
+            <span className="prog-curso-chevron">{cursoAtivo === c ? '▲' : '▼'}</span>
+          </button>
+        ))}
       </div>
 
       {track && (
-        <div className="prog-card">
-          <div className="prog-track-label">{track.label}</div>
+        <div className="prog-panel" ref={panelRef}>
+          <div className="prog-panel-head">
+            <div>
+              <div className="prog-panel-eyebrow">{track.label}</div>
+              <div className="prog-panel-curso">{cursoAtivo}</div>
+            </div>
+            <button className="prog-panel-close" onClick={() => setCursoAtivo('')}>✕</button>
+          </div>
           <div className="prog-timeline">
             {track.programa.map((item, i) => (
               <div key={i} className={`prog-item${item.lunch ? ' prog-item--lunch' : ''}`}>
