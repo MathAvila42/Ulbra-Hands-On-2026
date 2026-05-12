@@ -932,4 +932,6 @@ footer .tag { color: var(--orange); }
   .info-strip-grid { grid-template-columns: 1fr; }
   .countdown-inner { gap: 10px; }
   .countdown-label { font-size: 11px; }
+  .cursos-grid { grid-template-columns: 1fr; }
+  .prog-panel { padding: 20px 16px 16px; }
 }
