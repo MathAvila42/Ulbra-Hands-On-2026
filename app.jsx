@@ -172,7 +172,6 @@ Exclusivo para alunos EaD e Semipresencial.
         </div>
       </section>
 
-      <Cursos />
       <Programacao />
       <Faq />
 
