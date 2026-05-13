@@ -179,13 +179,14 @@ const TRACKS = {
     programa: [
       { h: '09:00', a: 'Credenciamento', l: 'Auditório 220 · Prédio 1' },
       { h: '09:30', a: 'Cerimônia de Abertura', l: 'Auditório 220 · Prédio 1' },
-      { h: '10:00', a: 'Workshop com Design Hub SAP', l: 'Sala 42 · Prédio 1' },
+      { h: '10:00', a: 'Palestra com Design Hub SAP', l: 'Sala 42 · Prédio 1' },
+      { h: '11:00', a: 'Debate: "A Inteligência Artificial vai substituir os designers?"', l: 'Sala 42 · Prédio 1' },
       { h: '12:00', a: 'Almoço', lunch: true },
-      { h: '13:30', a: 'Atividade: Inteligência Generativa em Design Digital', l: 'Sala 42 · Prédio 1' },
+      { h: '13:30', a: 'Inteligência Artificial Generativa em Design Digital', l: 'Sala 42 · Prédio 1' },
     ],
   },
   juridico: {
-    label: 'Serviços Jurídicos & Teologia',
+    label: 'Serviços Jurídicos & Notariais',
     programa: [
       { h: '09:00', a: 'Credenciamento', l: 'Auditório 220 · Prédio 1' },
       { h: '09:30', a: 'Cerimônia de Abertura', l: 'Auditório 220 · Prédio 1' },
@@ -193,6 +194,16 @@ const TRACKS = {
       { h: '12:00', a: 'Almoço', lunch: true },
       { h: '13:30', a: 'Desafios na proteção de crianças e adolescentes no Ambiente Virtual', l: 'Sala 34–36 · Prédio 1' },
       { h: '14:30', a: 'Quem tem direito à herança? Casos práticos sobre vocação hereditária', l: 'Sala 34–36 · Prédio 1' },
+    ],
+  },
+  teologia: {
+    label: 'Teologia',
+    programa: [
+      { h: '09:00', a: 'Credenciamento', l: 'Auditório 220 · Prédio 1' },
+      { h: '09:30', a: 'Cerimônia de Abertura', l: 'Auditório 220 · Prédio 1' },
+      { h: '10:00', a: 'Como falar bem? Princípios de Oratória e Retórica nos Discursos', l: 'Capela' },
+      { h: '12:00', a: 'Almoço', lunch: true },
+      { h: '13:30', a: 'Como escutar bem? Princípios de Escuta Clínica e Empática', l: 'Sala 34 · Prédio 1' },
     ],
   },
 };
@@ -242,7 +253,7 @@ const CURSO_TO_TRACK = {
   'Nutrição': 'nutricao',
   'Pedagogia': 'licenciaturas',
   'Serviço Social': 'servico_social',
-  'Teologia': 'juridico',
+  'Teologia': 'teologia',
 };
 
 const TODOS_CURSOS_PROG = Object.keys(CURSO_TO_TRACK).sort((a, b) => a.localeCompare(b, 'pt'));
