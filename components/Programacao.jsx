@@ -137,7 +137,12 @@ const TRACKS = {
     programa: [
       { h: '09:00', a: 'Credenciamento', l: 'Auditório 220 · Prédio 1' },
       { h: '09:30', a: 'Cerimônia de Abertura', l: 'Auditório 220 · Prédio 1' },
-      { h: '10:00', a: 'Workshop: Terapia Respiratória + Oficinas de Anatomia', l: 'Prédio 19 · Salas 206 e 210' },
+      { h: '10:00–12:00', a: 'Estações práticas simultâneas — grupos rotativos', stations: [
+        { a: 'Oficinas de Anatomia — cadáveres, ossos e peças acrílicas', l: 'Térreo · Lab 19', cap: '20 alunos · 20min por grupo' },
+        { a: 'Workshop de Aspiração Traqueal · Prof. Luciano', l: 'Sala 206 · Lab 19', cap: '20–25 alunos · 20min por grupo' },
+        { a: 'Workshop de VNI · Fisio. Maysa', l: 'Sala 210 · Lab 19', cap: '20 alunos · 20min por grupo' },
+        { a: 'Mobilidade Funcional em Paciente Neurológico · Prof. Simone Poletto', l: 'Prédio 6 · Sala 8', cap: '24 alunos · 30min por grupo' },
+      ]},
       { h: '12:00', a: 'Almoço', lunch: true },
       { h: '13:30', a: 'Avaliação Física-Postural e Testes Diagnósticos', l: 'Salas 2 e 9 · Prédio 55' },
     ],
@@ -341,6 +346,19 @@ function Programacao() {
                     <div className="prog-atividade">{item.a}</div>
                     {item.sub && <div className="prog-sub">{item.sub}</div>}
                     {item.l && <div className="prog-local">{item.l}</div>}
+                    {item.stations && (
+                      <div className="prog-stations">
+                        {item.stations.map((s, si) => (
+                          <div key={si} className="prog-station">
+                            <div className="prog-station-name">{s.a}</div>
+                            <div className="prog-station-meta">
+                              {s.l && <span className="prog-local" style={{marginTop:0}}>{s.l}</span>}
+                              {s.cap && <span className="prog-station-cap">{s.cap}</span>}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
               ))}
