@@ -137,12 +137,10 @@ const TRACKS = {
     programa: [
       { h: '09:00', a: 'Credenciamento', l: 'Auditório 220 · Prédio 1' },
       { h: '09:30', a: 'Cerimônia de Abertura', l: 'Auditório 220 · Prédio 1' },
-      { h: '10:00–12:00', a: 'Estações práticas simultâneas — grupos rotativos', stations: [
-        { a: 'Oficinas de Anatomia — cadáveres, ossos e peças acrílicas', l: 'Térreo · Lab 19', cap: '20 alunos · 20min por grupo' },
-        { a: 'Workshop de Aspiração Traqueal · Prof. Luciano', l: 'Sala 206 · Lab 19', cap: '20–25 alunos · 20min por grupo' },
-        { a: 'Workshop de VNI · Fisio. Maysa', l: 'Sala 210 · Lab 19', cap: '20 alunos · 20min por grupo' },
-        { a: 'Mobilidade Funcional em Paciente Neurológico · Prof. Simone Poletto', l: 'Prédio 6 · Sala 8', cap: '24 alunos · 30min por grupo' },
-      ]},
+      { h: '10:00', a: 'Oficinas de Anatomia — cadáveres, ossos e peças acrílicas', l: 'Térreo · Lab 19', sub: '20 alunos por vez · 20min de duração' },
+      { h: '10:00', a: 'Workshop de Aspiração Traqueal · Prof. Luciano', l: 'Sala 206 · Lab 19', sub: '20–25 alunos por vez · 20min de duração' },
+      { h: '10:00', a: 'Workshop de VNI · Fisio. Maysa', l: 'Sala 210 · Lab 19', sub: '20 alunos por vez · 20min de duração' },
+      { h: '10:00', a: 'Mobilidade Funcional em Paciente Neurológico · Prof. Simone Poletto', l: 'Prédio 6 · Sala 8', sub: '24 alunos por vez · 30min de duração' },
       { h: '12:00', a: 'Almoço', lunch: true },
       { h: '13:30', a: 'Avaliação Física-Postural e Testes Diagnósticos', l: 'Salas 2 e 9 · Prédio 55' },
     ],
