@@ -41,9 +41,9 @@ const TRACKS = {
       { h: '09:00', a: 'Credenciamento', l: 'Auditório 220 · Prédio 1' },
       { h: '09:30', a: 'Cerimônia de Abertura', l: 'Auditório 220 · Prédio 1' },
       { h: '10:00', a: 'Oficinas de Anatomia para os Cursos da Saúde', l: 'Lab. de Anatomia Humana · Prédio 19' },
-      { h: '11:00', a: 'Práticas Intensivas de Biomedicina', l: 'Labs 4° andar · Prédio 19' },
+      { h: '11:00', a: 'Parasitoses e Práticas Integrativas na Vida Real', l: 'Labs 4° andar · Prédio 19' },
       { h: '12:00', a: 'Almoço', lunch: true },
-      { h: '13:30', a: 'Dia D da Saúde: Parasitoses e Práticas Integrativas na Vida Real', l: 'Sala 5 · Prédio 1' },
+      { h: '13:30', a: 'Palestra e demonstração: Práticas Integrativas para Profissionais da Saúde', l: 'Sala 6 · Prédio 1' },
     ],
   },
   farmacia: {
