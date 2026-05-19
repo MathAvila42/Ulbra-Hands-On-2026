@@ -62,7 +62,6 @@ function RegistrationForm() {
 
   const isAluno = tipo === 'Aluno';
   const isProfissional = ['Professor', 'Tutor/Mediador', 'Coordenador'].includes(tipo);
-  const vagasEsgotadas = isAluno && modalidade === 'semi' && cursosSelecionados[0] === 'Fisioterapia';
 
   const cursosAluno = modalidade === 'ead' ? CURSOS_EAD : CURSOS_SEMI;
 
@@ -235,13 +234,7 @@ function RegistrationForm() {
         </div>
       )}
 
-      {vagasEsgotadas && (
-        <div className="form-vagas-esgotadas">
-          As vagas para Fisioterapia estão esgotadas.
-        </div>
-      )}
-
-      <button type="submit" className="form-submit" disabled={sending || !tipo || vagasEsgotadas}>
+      <button type="submit" className="form-submit" disabled={sending || !tipo}>
         {sending ? 'Enviando...' : 'Garantir minha vaga →'}
       </button>
 
