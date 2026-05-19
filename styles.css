@@ -378,7 +378,8 @@ img { display: block; max-width: 100%; }
   border-radius: 999px;
   transition: background 0.2s;
 }
-.form-submit:hover { background: var(--orange); }
+.form-submit:hover:not(:disabled) { background: var(--orange); }
+.form-submit:disabled { background: #c4c4cc; color: #8a8a9a; cursor: not-allowed; }
 
 .form-vagas-esgotadas {
   background: #fff3cd;
