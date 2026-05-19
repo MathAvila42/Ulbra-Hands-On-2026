@@ -72,9 +72,10 @@ const TRACKS = {
     programa: [
       { h: '09:00', a: 'Credenciamento', l: 'Auditório 220 · Prédio 1' },
       { h: '09:30', a: 'Cerimônia de Abertura', l: 'Auditório 220 · Prédio 1' },
-      { h: '10:00', a: 'Como utilizar a IA no dia a dia e tecnologias em redes sociais', l: 'Labin · Prédio 1 e Sala 230' },
+      { h: '10:00', a: 'Carreira em Cloud: Do técnico ao estratégico', l: 'Sala 230 · Prédio 1' },
+      { h: '10:00', a: 'Cloud AWS: Introdução aos Principais Serviços de Nuvem', l: 'Labin 1 · Prédio 1' },
       { h: '12:00', a: 'Almoço', lunch: true },
-      { h: '13:30', a: 'Computação em nuvem e mercado de trabalho', l: 'Labin · Prédio 1 e Sala 230' },
+      { h: '13:30', a: 'Ulbra UrbanTech | Mini Hackathon', l: 'Sala 230 · Prédio 1' },
     ],
   },
   nutricao: {
