@@ -50,11 +50,14 @@ function Field({ label, children }) {
 }
 
 function RegistrationForm() {
+  const jaInscrito = localStorage.getItem('handson2026_inscrito');
+
   const [tipo, setTipo] = React.useState('');
   const [modalidade, setModalidade] = React.useState('ead');
   const [cursosSelecionados, setCursosSelecionados] = React.useState([]);
   const [submitted, setSubmitted] = React.useState(false);
   const [sending, setSending] = React.useState(false);
+  const [jaExiste, setJaExiste] = React.useState(false);
   const [nome, setNome] = React.useState('');
   const [email, setEmail] = React.useState('');
   const [whatsapp, setWhatsapp] = React.useState('');
@@ -95,21 +98,56 @@ function RegistrationForm() {
       "Polo": polo,
     };
 
-    fetch(APPS_SCRIPT_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ data: [payload] }),
-    })
-      .then(() => {
-        setSending(false);
-        setSubmitted(true);
-        window.scrollTo({ top: document.getElementById('inscricao').getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
+    // Verifica por e-mail se já existe inscrição no SheetDB
+    fetch(`${APPS_SCRIPT_URL}/search?E-mail=${encodeURIComponent(email)}&limit=1`)
+      .then((r) => r.json())
+      .then((data) => {
+        if (Array.isArray(data) && data.length > 0) {
+          setSending(false);
+          setJaExiste(true);
+          return;
+        }
+        return fetch(APPS_SCRIPT_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ data: [payload] }),
+        }).then(() => {
+          localStorage.setItem('handson2026_inscrito', email);
+          setSending(false);
+          setSubmitted(true);
+          window.scrollTo({ top: document.getElementById('inscricao').getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
+        });
       })
       .catch(() => {
-        setSending(false);
-        setSubmitted(true);
+        // Em caso de erro na verificação, envia mesmo assim
+        fetch(APPS_SCRIPT_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ data: [payload] }),
+        }).then(() => {
+          localStorage.setItem('handson2026_inscrito', email);
+          setSending(false);
+          setSubmitted(true);
+          window.scrollTo({ top: document.getElementById('inscricao').getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
+        }).catch(() => {
+          setSending(false);
+          setSubmitted(true);
+        });
       });
   };
+
+  if (jaInscrito || jaExiste) {
+    return (
+      <div className="form-card" id="inscricao">
+        <div className="form-card-badge">Inscrição solidária</div>
+        <div className="form-success">
+          <div className="form-success-check">✓</div>
+          <h3>Você já está inscrito!</h3>
+          <p>Encontramos uma inscrição com este e-mail. Nos vemos no dia 30 de maio no Campus Canoas!</p>
+        </div>
+      </div>
+    );
+  }
 
   if (submitted) {
     return (
