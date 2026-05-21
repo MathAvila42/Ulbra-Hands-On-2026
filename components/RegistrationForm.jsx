@@ -50,8 +50,6 @@ function Field({ label, children }) {
 }
 
 function RegistrationForm() {
-  const jaInscrito = localStorage.getItem('handson2026_inscrito');
-
   const [tipo, setTipo] = React.useState('');
   const [modalidade, setModalidade] = React.useState('ead');
   const [cursosSelecionados, setCursosSelecionados] = React.useState([]);
@@ -103,7 +101,6 @@ function RegistrationForm() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ inscrito: payload }),
     }).then(() => {
-      localStorage.setItem('handson2026_inscrito', email);
       setSending(false);
       setSubmitted(true);
       window.scrollTo({ top: document.getElementById('inscricao').getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
@@ -123,7 +120,7 @@ function RegistrationForm() {
       .catch(() => enviar());
   };
 
-  if (jaInscrito || jaExiste) {
+  if (jaExiste) {
     return (
       <div className="form-card" id="inscricao">
         <div className="form-card-badge">Inscrição solidária</div>
