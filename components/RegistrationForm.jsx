@@ -1,6 +1,6 @@
 // RegistrationForm.jsx — formulário de inscrição
 
-const APPS_SCRIPT_URL = "https://sheetdb.io/api/v1/xf1oz7m7gi0de";
+const APPS_SCRIPT_URL = "https://api.sheety.co/d5c83aa944bc4248ead9e8c6694c041b/ulbraHandsOn2026Inscritos/inscritos";
 
 const CURSOS_EAD = [
   'Administração', 'Biologia', 'Ciências Contábeis',
@@ -88,52 +88,39 @@ function RegistrationForm() {
       : cursosSelecionados.join(', ');
 
     const payload = {
-      "Timestamp": new Date().toLocaleString("pt-BR"),
-      "Tipo": tipo,
-      "Nome": nome,
-      "E-mail": email,
-      "WhatsApp": whatsapp,
-      "Modalidade": isAluno ? (modalidade === 'ead' ? 'EaD' : 'Semipresencial') : '',
-      "Curso": cursoFinal,
-      "Polo": polo,
+      "timestamp": new Date().toLocaleString("pt-BR"),
+      "tipo": tipo,
+      "nome": nome,
+      "eMail": email,
+      "whatsApp": whatsapp,
+      "modalidade": isAluno ? (modalidade === 'ead' ? 'EaD' : 'Semipresencial') : '',
+      "curso": cursoFinal,
+      "polo": polo,
     };
 
-    // Verifica por e-mail se já existe inscrição no SheetDB
-    fetch(`${APPS_SCRIPT_URL}/search?E-mail=${encodeURIComponent(email)}&limit=1`)
+    const enviar = () => fetch(APPS_SCRIPT_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ inscrito: payload }),
+    }).then(() => {
+      localStorage.setItem('handson2026_inscrito', email);
+      setSending(false);
+      setSubmitted(true);
+      window.scrollTo({ top: document.getElementById('inscricao').getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
+    });
+
+    // Verifica por e-mail se já existe inscrição
+    fetch(`${APPS_SCRIPT_URL}?filter[eMail]=${encodeURIComponent(email)}`)
       .then((r) => r.json())
       .then((data) => {
-        if (Array.isArray(data) && data.length > 0) {
+        if (data?.inscritos?.length > 0) {
           setSending(false);
           setJaExiste(true);
           return;
         }
-        return fetch(APPS_SCRIPT_URL, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ data: [payload] }),
-        }).then(() => {
-          localStorage.setItem('handson2026_inscrito', email);
-          setSending(false);
-          setSubmitted(true);
-          window.scrollTo({ top: document.getElementById('inscricao').getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
-        });
+        return enviar();
       })
-      .catch(() => {
-        // Em caso de erro na verificação, envia mesmo assim
-        fetch(APPS_SCRIPT_URL, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ data: [payload] }),
-        }).then(() => {
-          localStorage.setItem('handson2026_inscrito', email);
-          setSending(false);
-          setSubmitted(true);
-          window.scrollTo({ top: document.getElementById('inscricao').getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
-        }).catch(() => {
-          setSending(false);
-          setSubmitted(true);
-        });
-      });
+      .catch(() => enviar());
   };
 
   if (jaInscrito || jaExiste) {
