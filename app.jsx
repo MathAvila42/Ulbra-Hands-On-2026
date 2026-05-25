@@ -64,10 +64,6 @@ function App() {
 
   const headline = HEADLINES[tweaks.headline] || HEADLINES.transforma;
 
-  const scrollToForm = () => {
-    document.getElementById('inscricao')?.scrollIntoView?.({ behavior: 'smooth', block: 'start' });
-  };
-
   return (
     <>
       {/* Top bar */}
@@ -79,7 +75,6 @@ function App() {
           </div>
           <div style={{display:'flex', alignItems:'center', gap:'16px'}}>
             <a href="/programacao" className="top-nav-link">Programação</a>
-            <button className="top-cta" onClick={scrollToForm}>Inscrever-se</button>
           </div>
         </div>
       </header>
@@ -127,9 +122,13 @@ Exclusivo para alunos EaD e Semipresencial.
             </div>
           </div>
 
-          {/* Right: formulário fixo */}
+          {/* Right: inscrições encerradas */}
           <div className="hero-right">
-            <RegistrationForm />
+            <div className="encerrado-card">
+              <div className="encerrado-icon">🔒</div>
+              <h2 className="encerrado-title">Inscrições encerradas</h2>
+              <p className="encerrado-sub">As inscrições para o Ulbra Hands On 2026 foram encerradas. Nos vemos no dia 30 de maio!</p>
+            </div>
           </div>
         </div>
       </section>

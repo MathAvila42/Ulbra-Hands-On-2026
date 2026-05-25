@@ -963,3 +963,28 @@ footer .tag { color: var(--orange); }
   .cursos-grid { grid-template-columns: 1fr; }
   .prog-panel { padding: 20px 16px 16px; }
 }
+
+/* Inscrições encerradas */
+.encerrado-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 48px 36px;
+  text-align: center;
+  box-shadow: 0 4px 32px rgba(15,16,50,0.10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.encerrado-icon { font-size: 48px; line-height: 1; }
+.encerrado-title {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1.6rem;
+  color: var(--navy);
+}
+.encerrado-sub {
+  font-size: 1rem;
+  color: var(--muted);
+  max-width: 320px;
+  line-height: 1.6;
+}
