@@ -988,3 +988,17 @@ footer .tag { color: var(--orange); }
   max-width: 320px;
   line-height: 1.6;
 }
+.encerrado-btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 14px 28px;
+  background: var(--orange);
+  color: var(--white);
+  font-family: 'Barlow', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.18s;
+}
+.encerrado-btn:hover { background: #c94e14; }

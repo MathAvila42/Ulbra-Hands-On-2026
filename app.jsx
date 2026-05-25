@@ -128,6 +128,7 @@ Exclusivo para alunos EaD e Semipresencial.
               <div className="encerrado-icon">🔒</div>
               <h2 className="encerrado-title">Inscrições encerradas</h2>
               <p className="encerrado-sub">As inscrições para o Ulbra Hands On 2026 foram encerradas. Nos vemos no dia 30 de maio!</p>
+              <a href="/programacao" className="encerrado-btn">Ver programação →</a>
             </div>
           </div>
         </div>
