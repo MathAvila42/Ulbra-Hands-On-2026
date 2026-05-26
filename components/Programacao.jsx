@@ -62,6 +62,7 @@ const TRACKS = {
       { h: '09:00', a: 'Credenciamento', l: 'Auditório 220 · Prédio 1' },
       { h: '09:30', a: 'Cerimônia de Abertura', l: 'Auditório 220 · Prédio 1' },
       { h: '10:00', a: 'Visitação prática ao Laboratório de Anatomia', l: 'Lab. de Anatomia · Prédio 19' },
+      { h: '11:00', a: 'Visitação prática ao laboratório de Tecnologia Farmacêutica', l: '' },
       { h: '12:00', a: 'Almoço', lunch: true },
       { h: '13:30', a: 'Microagulhamento na Estética Regenerativa — Parte I', l: 'Sala 10 · Prédio 1' },
       { h: '14:30', a: 'Microagulhamento na Estética Regenerativa — Parte II', l: 'Lab. de Estética · Sala 13 · Prédio 1' },
