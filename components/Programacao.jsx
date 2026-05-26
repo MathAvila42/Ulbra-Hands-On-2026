@@ -187,7 +187,7 @@ const TRACKS = {
       { h: '10:00', a: 'Palestra com Design Hub SAP', l: 'Sala 42 · Prédio 1' },
       { h: '11:00', a: 'Debate: "A Inteligência Artificial vai substituir os designers?"', l: 'Sala 42 · Prédio 1' },
       { h: '12:00', a: 'Almoço', lunch: true },
-      { h: '13:30', a: 'Inteligência Artificial Generativa em Design Digital', l: 'Sala 42 · Prédio 1' },
+      { h: '13:30', a: 'Inteligência Artificial Generativa em Design Digital', l: 'Labin 1 · Prédio 1' },
     ],
   },
   juridico: {
