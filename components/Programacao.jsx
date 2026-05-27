@@ -4,7 +4,7 @@ const TRACKS = {
   negocios: {
     label: 'Negócios & Gestão',
     programa: [
-      { h: '09:00', a: 'Credenciamento', l: 'Auditório 220 · Prédio 1' },
+      { h: '09:00', a: 'Credenciamento', l: 'Saguão do Prédio 1' },
       { h: '09:30', a: 'Cerimônia de Abertura', l: 'Auditório 220 · Prédio 1' },
       { h: '10:00', a: 'Palestra — O que é e como fazer um Pitch de Sucesso?', l: 'Sala 206 · Prédio 1', sub: 'Palestrante: Ismael Ribeiro · Comunicação para Líderes' },
       { h: '11:00', a: 'Shark Tank — Orientação e divisão de grupos', l: 'Sala 206 · Prédio 1' },
@@ -16,7 +16,7 @@ const TRACKS = {
   agronomia: {
     label: 'Agronomia',
     programa: [
-      { h: '09:00', a: 'Credenciamento', l: 'Auditório 220 · Prédio 1' },
+      { h: '09:00', a: 'Credenciamento', l: 'Saguão do Prédio 1' },
       { h: '09:30', a: 'Cerimônia de Abertura', l: 'Auditório 220 · Prédio 1' },
       { h: '10:00', a: 'Teoria: Avaliação do solo e importância das abelhas na agricultura', l: 'Prédio 8 · Sala 59' },
       { h: '11:00', a: 'Prática: Produção e manejo de abelhas', l: 'Prédio 8 · Sala 59' },
@@ -28,7 +28,7 @@ const TRACKS = {
   arquitetura: {
     label: 'Arquitetura & Design de Interiores',
     programa: [
-      { h: '09:00', a: 'Credenciamento', l: 'Auditório 220 · Prédio 1' },
+      { h: '09:00', a: 'Credenciamento', l: 'Saguão do Prédio 1' },
       { h: '09:30', a: 'Cerimônia de Abertura', l: 'Auditório 220 · Prédio 1' },
       { h: '10:00', a: 'Criação de artefatos de cimento e gesso', l: 'Prédio 9 · Sala 56' },
       { h: '12:00', a: 'Almoço', lunch: true },
@@ -38,7 +38,7 @@ const TRACKS = {
   biomedicina: {
     label: 'Biomedicina',
     programa: [
-      { h: '09:00', a: 'Credenciamento', l: 'Auditório 220 · Prédio 1' },
+      { h: '09:00', a: 'Credenciamento', l: 'Saguão do Prédio 1' },
       { h: '09:30', a: 'Cerimônia de Abertura', l: 'Auditório 220 · Prédio 1' },
       { h: '10:00', a: 'Oficinas de Anatomia para os Cursos da Saúde', l: 'Lab. de Anatomia Humana · Prédio 19' },
       { h: '11:00', a: 'Parasitoses e Práticas Integrativas na Vida Real', l: 'Labs 4° andar · Prédio 19' },
@@ -49,7 +49,7 @@ const TRACKS = {
   farmacia: {
     label: 'Farmácia',
     programa: [
-      { h: '09:00', a: 'Credenciamento', l: 'Auditório 220 · Prédio 1' },
+      { h: '09:00', a: 'Credenciamento', l: 'Saguão do Prédio 1' },
       { h: '09:30', a: 'Cerimônia de Abertura', l: 'Auditório 220 · Prédio 1' },
       { h: '10:00', a: 'Visitação: Labs de Anatomia e Tecnologia Farmacêutica', l: 'Lab. de Anatomia · Prédio 19 / Lab. 406' },
       { h: '12:00', a: 'Almoço', lunch: true },
@@ -59,7 +59,7 @@ const TRACKS = {
   estetica: {
     label: 'Estética e Cosmética',
     programa: [
-      { h: '09:00', a: 'Credenciamento', l: 'Auditório 220 · Prédio 1' },
+      { h: '09:00', a: 'Credenciamento', l: 'Saguão do Prédio 1' },
       { h: '09:30', a: 'Cerimônia de Abertura', l: 'Auditório 220 · Prédio 1' },
       { h: '10:00', a: 'Visitação prática ao Laboratório de Anatomia', l: 'Lab. de Anatomia · Prédio 19' },
       { h: '11:00', a: 'Visitação prática ao laboratório de Tecnologia Farmacêutica', l: '' },
@@ -71,7 +71,7 @@ const TRACKS = {
   tecnologia: {
     label: 'Tecnologia & Computação',
     programa: [
-      { h: '09:00', a: 'Credenciamento', l: 'Auditório 220 · Prédio 1' },
+      { h: '09:00', a: 'Credenciamento', l: 'Saguão do Prédio 1' },
       { h: '09:30', a: 'Cerimônia de Abertura', l: 'Auditório 220 · Prédio 1' },
       { h: '10:00', a: 'Carreira em Cloud: Do técnico ao estratégico', l: 'Sala 230 · Prédio 1' },
       { h: '10:00', a: 'Cloud AWS: Introdução aos Principais Serviços de Nuvem', l: 'Labin 1 · Prédio 1' },
@@ -82,7 +82,7 @@ const TRACKS = {
   nutricao: {
     label: 'Nutrição',
     programa: [
-      { h: '09:00', a: 'Credenciamento', l: 'Auditório 220 · Prédio 1' },
+      { h: '09:00', a: 'Credenciamento', l: 'Saguão do Prédio 1' },
       { h: '09:30', a: 'Cerimônia de Abertura', l: 'Auditório 220 · Prédio 1' },
       { h: '10:00', a: 'Workshop sobre saúde mental', l: 'Prédio 1 · Sala 40' },
       { h: '12:00', a: 'Almoço', lunch: true },
@@ -93,7 +93,7 @@ const TRACKS = {
   educacao_fisica: {
     label: 'Educação Física',
     programa: [
-      { h: '09:00', a: 'Credenciamento', l: 'Auditório 220 · Prédio 1' },
+      { h: '09:00', a: 'Credenciamento', l: 'Saguão do Prédio 1' },
       { h: '09:30', a: 'Cerimônia de Abertura', l: 'Auditório 220 · Prédio 1' },
       { h: '10:00', a: 'Oficina 1: Avaliação cineantropométrica completa', l: 'Prédio 55 · Salas 2 e 9' },
       { h: '11:00', a: 'Oficina 2: Avaliação metabólica, cardiorrespiratória e neuromuscular', l: 'Prédio 55 · Salas 2 e 9' },
@@ -105,7 +105,7 @@ const TRACKS = {
   marketing: {
     label: 'Marketing & Mídias Digitais',
     programa: [
-      { h: '09:00', a: 'Credenciamento', l: 'Auditório 220 · Prédio 1' },
+      { h: '09:00', a: 'Credenciamento', l: 'Saguão do Prédio 1' },
       { h: '09:30', a: 'Cerimônia de Abertura', l: 'Auditório 220 · Prédio 1' },
       { h: '10:00', a: 'Idiotice Artificial com Agência Orgânica', l: 'Sala 39 · Prédio 1' },
       { h: '12:00', a: 'Almoço', lunch: true },
@@ -115,7 +115,7 @@ const TRACKS = {
   pilotagem: {
     label: 'Pilotagem Profissional de Aeronaves',
     programa: [
-      { h: '09:00', a: 'Credenciamento', l: 'Auditório 220 · Prédio 1' },
+      { h: '09:00', a: 'Credenciamento', l: 'Saguão do Prédio 1' },
       { h: '09:30', a: 'Cerimônia de Abertura', l: 'Auditório 220 · Prédio 1' },
       { h: '10:00', a: 'Oficina: As várias atuações profissionais para os egressos', l: 'Sala 205 · Prédio 1' },
       { h: '12:00', a: 'Almoço', lunch: true },
@@ -125,7 +125,7 @@ const TRACKS = {
   engenharia: {
     label: 'Engenharia & Produção',
     programa: [
-      { h: '09:00', a: 'Credenciamento', l: 'Auditório 220 · Prédio 1' },
+      { h: '09:00', a: 'Credenciamento', l: 'Saguão do Prédio 1' },
       { h: '09:30', a: 'Cerimônia de Abertura', l: 'Auditório 220 · Prédio 1' },
       { h: '10:00', a: 'Workshop: Ônibus Elétrico Marcopolo', l: 'Sala 37 · Prédio 1', sub: 'Eng. Marcus Aurélio Telh — Engenheiro de Produto da Marcopolo' },
       { h: '11:00', a: 'Apresentação de Professores / Campus Tour', l: 'Sala 37 · Prédio 1' },
@@ -137,7 +137,7 @@ const TRACKS = {
   fisioterapia: {
     label: 'Fisioterapia',
     programa: [
-      { h: '09:00', a: 'Credenciamento', l: 'Auditório 220 · Prédio 1' },
+      { h: '09:00', a: 'Credenciamento', l: 'Saguão do Prédio 1' },
       { h: '09:30', a: 'Cerimônia de Abertura', l: 'Auditório 220 · Prédio 1' },
       { h: '10:00', a: 'Oficinas de Anatomia — cadáveres, ossos e peças acrílicas', l: 'Térreo · Lab 19', sub: '20 alunos por vez · 20min de duração' },
       { h: '10:00', a: 'Workshop de Aspiração Traqueal · Prof. Luciano', l: 'Sala 206 · Lab 19', sub: '20–25 alunos por vez · 20min de duração' },
@@ -150,7 +150,7 @@ const TRACKS = {
   jornalismo: {
     label: 'Jornalismo',
     programa: [
-      { h: '09:00', a: 'Credenciamento', l: 'Auditório 220 · Prédio 1' },
+      { h: '09:00', a: 'Credenciamento', l: 'Saguão do Prédio 1' },
       { h: '09:30', a: 'Cerimônia de Abertura', l: 'Auditório 220 · Prédio 1' },
       { h: '10:00', a: 'Cobertura Jornalística do Evento', l: 'Labex · Sala 3 · Prédio 6' },
       { h: '12:00', a: 'Almoço', lunch: true },
@@ -160,7 +160,7 @@ const TRACKS = {
   licenciaturas: {
     label: 'Licenciaturas',
     programa: [
-      { h: '09:00', a: 'Credenciamento', l: 'Auditório 220 · Prédio 1' },
+      { h: '09:00', a: 'Credenciamento', l: 'Saguão do Prédio 1' },
       { h: '09:30', a: 'Cerimônia de Abertura', l: 'Auditório 220 · Prédio 1' },
       { h: '10:00', a: 'Matemática que Vem do Mundo: Jogos, Culturas e Saberes em Ação', l: 'Sala 1 · Prédio 1' },
       { h: '11:00', a: 'Ciência Viva: Aprender nos Espaços de Memória', l: 'Museu de Ciências Naturais' },
@@ -172,7 +172,7 @@ const TRACKS = {
   servico_social: {
     label: 'Serviço Social',
     programa: [
-      { h: '09:00', a: 'Credenciamento', l: 'Auditório 220 · Prédio 1' },
+      { h: '09:00', a: 'Credenciamento', l: 'Saguão do Prédio 1' },
       { h: '09:30', a: 'Cerimônia de Abertura', l: 'Auditório 220 · Prédio 1' },
       { h: '10:00', a: 'Workshop sobre saúde mental', l: 'Sala 40 · Prédio 1' },
       { h: '12:00', a: 'Almoço', lunch: true },
@@ -182,7 +182,7 @@ const TRACKS = {
   design_digital: {
     label: 'Design Digital',
     programa: [
-      { h: '09:00', a: 'Credenciamento', l: 'Auditório 220 · Prédio 1' },
+      { h: '09:00', a: 'Credenciamento', l: 'Saguão do Prédio 1' },
       { h: '09:30', a: 'Cerimônia de Abertura', l: 'Auditório 220 · Prédio 1' },
       { h: '10:00', a: 'Palestra com Design Hub SAP', l: 'Sala 42 · Prédio 1' },
       { h: '11:00', a: 'Debate: "A Inteligência Artificial vai substituir os designers?"', l: 'Sala 42 · Prédio 1' },
@@ -193,7 +193,7 @@ const TRACKS = {
   juridico: {
     label: 'Serviços Jurídicos & Notariais',
     programa: [
-      { h: '09:00', a: 'Credenciamento', l: 'Auditório 220 · Prédio 1' },
+      { h: '09:00', a: 'Credenciamento', l: 'Saguão do Prédio 1' },
       { h: '09:30', a: 'Cerimônia de Abertura', l: 'Auditório 220 · Prédio 1' },
       { h: '10:00', a: 'Como falar bem? Princípios de Oratória e Retórica nos Discursos', l: 'Capela' },
       { h: '12:00', a: 'Almoço', lunch: true },
@@ -204,7 +204,7 @@ const TRACKS = {
   teologia: {
     label: 'Teologia',
     programa: [
-      { h: '09:00', a: 'Credenciamento', l: 'Auditório 220 · Prédio 1' },
+      { h: '09:00', a: 'Credenciamento', l: 'Saguão do Prédio 1' },
       { h: '09:30', a: 'Cerimônia de Abertura', l: 'Auditório 220 · Prédio 1' },
       { h: '10:00', a: 'Como falar bem? Princípios de Oratória e Retórica nos Discursos', l: 'Capela' },
       { h: '12:00', a: 'Almoço', lunch: true },
