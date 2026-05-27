@@ -964,6 +964,44 @@ footer .tag { color: var(--orange); }
   .prog-panel { padding: 20px 16px 16px; }
 }
 
+/* Patrocinadores */
+.sponsors-section {
+  background: var(--navy);
+  padding: 48px 24px;
+}
+.sponsors-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.sponsors-label {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+.sponsors-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+.sponsor-logo {
+  height: 64px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+.sponsor-logo:hover { opacity: 1; }
+
 /* Inscrições encerradas */
 .encerrado-card {
   background: var(--white);

@@ -178,6 +178,16 @@ Exclusivo para alunos EaD e Semipresencial.
       <Cursos />
       <Faq />
 
+      {/* Patrocinadores */}
+      <div className="sponsors-section">
+        <div className="sponsors-inner">
+          <div className="sponsors-label">Patrocinador</div>
+          <div className="sponsors-logos">
+            <img src="assets/UG - Templates .png" alt="Patrocinador" className="sponsor-logo" />
+          </div>
+        </div>
+      </div>
+
       {/* Contato */}
       <div className="contact-section">
         <div className="contact-inner">
